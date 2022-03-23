@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        div#res{
+            margin-top: 10px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>Identificador de Nacionalidade</h1>
+    <input type="text" name="nac" id="nac">
+    <input type="button" value="Descubra" onclick="clicar()">
+    <div id="res"></div>
+
+    <script>
+        function clicar(){
+            var nac = window.document.getElementById('nac').value;
+            var res = window.document.getElementById('res');
+            var nac1 = 'Brasil'
+            if(nac==nac1){
+                res.innerText = 'Tu é brasa caraiii'
+            } else {
+                res.innerHTML = 'Ih esse é gringo pô'
+            }
+        }
+    </script>
+
+</body>
+</html>
+

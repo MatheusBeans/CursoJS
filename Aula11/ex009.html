@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+        div{
+            margin-top: 10px;
+        }
+        div#lim{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    <div>Qual sua velocidade? <input type="number" name="txtvel" id="txtvel"></div>
+    <div>Qual o limite da rodovia? <input type="number" name="txtlim" id="txtlim"></div>
+    <div><input type="button" value="Calcule" onclick="clicar()"></div>
+    <div id="res"></div>
+    <script>
+        function clicar(){
+            var tvel = window.document.getElementById('txtvel')
+            var tlim = window.document.getElementById('txtlim')
+            var vel = Number(tvel.value)
+            var lim = Number(tlim.value)
+            var res = window.document.getElementById('res')
+            var nvl = null
+            //res.innerText = tvel
+            if (vel>lim) {
+                res.innerText = 'Você estava acima da velocidade limite! Voce foi multado!!'
+            } else {
+                res.innerText = 'Você estava dentro do limite permitido!'
+            }
+        }
+    </script>
+</body>
+</html>
+
